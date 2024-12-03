@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BO6 Terminus Zombies Puzzle Helper</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background-color: #1e1e2e; color: #ffffff; }
+        .section { margin-bottom: 20px; }
+        .symbol-button { 
+            display: inline-block; 
+            margin: 5px; 
+            padding: 5px; 
+            background-color: #333; 
+            border: 1px solid #555; 
+            cursor: pointer; 
+            text-align: center; 
+            border-radius: 5px;
+        }
+        .symbol-button.selected { background-color: #007bff; border-color: #0056b3; }
+        .symbol-button img { width: 60px; height: 60px; display: block; margin: 0 auto; }
+        .result { margin-top: 20px; font-size: 1.2em; }
+    </style>
+</head>
+<body>
+    <h1>BO6 Terminus Zombies Puzzle Helper</h1>
+    <p>Select the symbols for x, y, and z to solve the puzzle!</p>
+
+    <!-- Selection for X -->
+    <div class="section">
+        <h2>Select x:</h2>
+        <div id="x-symbols">
+            <div class="symbol-button" data-value="0" onclick="selectSymbol('x', 0, this)">
+                <img src="symbol1.png" alt="Symbol 1">
+            </div>
+            <div class="symbol-button" data-value="11" onclick="selectSymbol('x', 11, this)">
+                <img src="symbol2.png" alt="Symbol 2">
+            </div>
+            <div class="symbol-button" data-value="10" onclick="selectSymbol('x', 10, this)">
+                <img src="symbol3.png" alt="Symbol 3">
+            </div>
+            <div class="symbol-button" data-value="22" onclick="selectSymbol('x', 22, this)">
+                <img src="symbol4.png" alt="Symbol 4">
+            </div>
+            <div class="symbol-button" data-value="21" onclick="selectSymbol('x', 21, this)">
+                <img src="symbol5.png" alt="Symbol 5">
+            </div>
+            <div class="symbol-button" data-value="20" onclick="selectSymbol('x', 20, this)">
+                <img src="symbol6.png" alt="Symbol 6">
+            </div>
+        </div>
+    </div>
+
+    <!-- Selection for Y -->
+    <div class="section">
+        <h2>Select y:</h2>
+        <div id="y-symbols">
+            <div class="symbol-button" data-value="0" onclick="selectSymbol('y', 0, this)">
+                <img src="symbol1.png" alt="Symbol 1">
+            </div>
+            <div class="symbol-button" data-value="11" onclick="selectSymbol('y', 11, this)">
+                <img src="symbol2.png" alt="Symbol 2">
+            </div>
+            <div class="symbol-button" data-value="10" onclick="selectSymbol('y', 10, this)">
+                <img src="symbol3.png" alt="Symbol 3">
+            </div>
+            <div class="symbol-button" data-value="22" onclick="selectSymbol('y', 22, this)">
+                <img src="symbol4.png" alt="Symbol 4">
+            </div>
+            <div class="symbol-button" data-value="21" onclick="selectSymbol('y', 21, this)">
+                <img src="symbol5.png" alt="Symbol 5">
+            </div>
+            <div class="symbol-button" data-value="20" onclick="selectSymbol('y', 20, this)">
+                <img src="symbol6.png" alt="Symbol 6">
+            </div>
+        </div>
+    </div>
+
+    <!-- Selection for Z -->
+    <div class="section">
+        <h2>Select z:</h2>
+        <div id="z-symbols">
+            <div class="symbol-button" data-value="0" onclick="selectSymbol('z', 0, this)">
+                <img src="symbol1.png" alt="Symbol 1">
+            </div>
+            <div class="symbol-button" data-value="11" onclick="selectSymbol('z', 11, this)">
+                <img src="symbol2.png" alt="Symbol 2">
+            </div>
+            <div class="symbol-button" data-value="10" onclick="selectSymbol('z', 10, this)">
+                <img src="symbol3.png" alt="Symbol 3">
+            </div>
+            <div class="symbol-button" data-value="22" onclick="selectSymbol('z', 22, this)">
+                <img src="symbol4.png" alt="Symbol 4">
+            </div>
+            <div class="symbol-button" data-value="21" onclick="selectSymbol('z', 21, this)">
+                <img src="symbol5.png" alt="Symbol 5">
+            </div>
+            <div class="symbol-button" data-value="20" onclick="selectSymbol('z', 20, this)">
+                <img src="symbol6.png" alt="Symbol 6">
+            </div>
+        </div>
+    </div>
+
+    <!-- Calculate button -->
+    <button onclick="calculateResults()">Calculate</button>
+
+    <!-- Display results -->
+    <div class="result" id="result"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
